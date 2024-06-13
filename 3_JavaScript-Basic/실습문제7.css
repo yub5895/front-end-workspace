@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section img {
+  margin: 20px;
+  border-radius: 50%;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn1 button {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  margin: 10px;
+  background: hotpink;
+  border: solid hotpink;
+  border-radius: 5px;
+  color: blue;
+  font-size: 17px;
+  padding-left: 18px;
+  padding-top: 2px;
+}
+
+#btn2 button {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  margin: 10px;
+  background: purple;
+  border: solid purple;
+  border-radius: 5px;
+  color: hotpink;
+  font-size: 17px;
+  padding-left: 9px;
+  padding-top: 2px;
+}

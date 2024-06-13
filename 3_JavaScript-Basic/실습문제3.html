@@ -8,9 +8,10 @@
   <body>
     <!-- Q1. 배열을 문자열로 변환하여 console에 출력하시오. -->
     <script>
-      const tel = ["010", "1234", "5678"].join("-");
-      console.log(tel);
+      const tel = ["010", "1234", "5678"];
       // 출력 예시 : 010-1234-5678
+      const strTel = tel.join("-");
+      console.log(strTel);
     </script>
 
     <!-- Q2. 배열 함수들 활용!-->
@@ -18,7 +19,7 @@
       const scores = [85, 98, 99, 76, 82];
 
       // 1)
-      scores.splice(5, 0, 100);
+      /* scores.splice(5, 0, 100); */ scores.push(100);
       console.log(scores); // [85, 98, 99, 76, 82, 100]
       // 2)
       scores.pop();
@@ -29,26 +30,31 @@
       console.log(scores); // [98, 99, 76, 82]
 
       // 4)
-      scores.shift();
-      scores.splice(0, 1, 30);
+      scores.splice(0, 2, 30); // 가운데 숫자가 2인 경우 2개를 삭제할 수 있다.
       console.log(scores); // [30, 76, 82]
 
       // 5)
-      scores.pop();
-      scores.splice(1, 1, 50);
+
+      scores.splice(1, 2, 50);
       console.log(scores); // [30, 50]
     </script>
 
     <!-- Q3. 해당 배열을 이용하여 출력 결과대로 나오게 구현하세요 -->
     <script>
       const music = ["가요", "팝송", "클래식", "재즈", "OST"];
-      music.shift();
+      /* music.shift();
       music.pop();
       console.log(music);
 
       music.push("OST");
       const [a, b, c, d, e] = music;
-      console.log(d);
+      console.log(d.split(" ")); */
+
+      const music2 = music.slice(1, 4);
+      console.log(music2);
+
+      const music3 = music.slice(4); // 4, 5가 맞으나 끝나는 인덱스는 생략가능
+      console.log(music3);
       // ['팝송', '클래식', '재즈']
       // ['OST']
     </script>
@@ -56,7 +62,7 @@
     <!-- Q4. 해당 배열을 오름차순(작은 숫자 ~ 큰 숫자)으로 정렬해주세요  -->
     <script>
       const numbers = [7, -24, -8, 10, 17, -58];
-      numbers.splice;
+      numbers.sort((a, b) => a - b); // 숫자 정렬이기 때문에 넣어줘야 함
       console.log(numbers);
     </script>
   </body>

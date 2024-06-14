@@ -1,0 +1,9 @@
+form {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+form span {
+  display: block;
+  color: #999;
+  margin-left: 12px;
+}

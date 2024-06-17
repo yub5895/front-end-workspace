@@ -1,8 +1,10 @@
-div {
-  padding: 5px;
+form {
+  border: solid 2px;
+  padding: 10px;
 }
 
-span {
+form span {
   display: block;
-  color: #999;
+  margin-left: 10px;
+  color: gray;
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/시험공부3.css" />
   </head>
   <body>
-    <fieldset>
+    <form>
       <div>
         <label for="id">* 아이디 : </label>
         <input type="text" id="id" name="id" />
@@ -52,12 +52,15 @@
       <div>
         <label for="addr">* 거주지 : </label>
         <select name="addr" id="addr">
-          <option value="서울"></option>
-          <option value="시흥"></option>
-          <option value="인천"></option>
-          <option value="부천"></option>
+          <option value="서울">서울</option>
+          <option value="시흥">시흥</option>
+          <option value="인천">인천</option>
+          <option value="부천">부천</option>
         </select>
       </div>
-    </fieldset>
+      <button type="submit">회원가입</button>
+      <button type="reset">취소</button>
+    </form>
+    <script src="../혼자/CSS/시험공부3.js"></script>
   </body>
 </html>

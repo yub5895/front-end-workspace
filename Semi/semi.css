@@ -1,0 +1,102 @@
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 15px;
+    color: white;
+}
+a:hover {
+    background-color: white;
+    color: black;
+    width: 100%;
+    align-items: center;
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+#section1 {
+    background-color: violet;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../resources/제주1.jpg);
+    background-blend-mode: color;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#section2 {
+    background-color: violet;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../resources/캘린더3.jpg);
+    background-blend-mode: color;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#section3 {
+    background-color: violet;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../resources/호수1.jpg);
+    background-blend-mode: color;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#section4 {
+    background-color: violet;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(../resources/서울2.jpg);
+    background-blend-mode: color;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}

@@ -1,0 +1,173 @@
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 15px;
+  color: white;
+}
+
+header h1 header a:hover {
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+#a3 {
+  margin-top: 80px;
+  border: 2px solid white;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 30px;
+  font-size: 1rem;
+}
+
+#section1 {
+  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../resources/제주1.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#section2 {
+  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../resources/캘린더3.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#section3 {
+  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../resources/호수1.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#section4 {
+  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../resources/서울2.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#section5 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  padding: 15px;
+}
+#section5 p {
+  padding: 30px;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+#section6 {
+  height: 100vh;
+  /*
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;*/
+}
+
+#section5 img {
+  width: 1000px;
+  height: 500px;
+}
+
+.card2 {
+  font-size: 2.5rem;
+}
+
+.card2 p {
+  font-size: 1.2rem;
+  padding: 30px;
+  color: gray;
+}
+
+.images {
+  position: relative;
+  flex: 1;
+  width: 50%;
+}
+
+.images img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  transform: -100vw;
+}
+
+.card3 {
+}
+
+.card4 {
+}

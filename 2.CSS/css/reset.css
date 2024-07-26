@@ -127,8 +127,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+<<<<<<< HEAD
 
 a {
   color: white;
   text-decoration: none;
 }
+=======
+a {
+  text-decoration: none;
+  color: black;
+}
+* {
+  box-sizing: border-box;
+}
+>>>>>>> f4000c4f1baa00360af0b59d55e45d05c12b786d

@@ -49,6 +49,12 @@ nav a {
   font-weight: bold;
 }
 
+#section1 div {
+  display: flex;
+  border-radius: white 2px solid;
+  padding-top: 20px;
+}
+
 #section2 {
   background-color: violet;
   background-color: rgba(0, 0, 0, 0.6);
@@ -98,4 +104,28 @@ nav a {
   color: white;
   font-size: 3rem;
   font-weight: bold;
+}
+
+
+#section5 h1{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+#section5 p {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  padding: 15px;
+}
+#section5 img {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
+  padding-left: 400px;
+  padding-top: 15px;
 }

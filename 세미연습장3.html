@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="세미연습장3.css">
+    <style>
+        ul{
+            list-style: disc;
+
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="">
+          <h1 class="nav-link">
+            Forever <span class="red">4</span><span class="white">0</span
+            ><span class="red">4</span>
+          </h1></a
+        >
+        <nav id="a2">
+          <a href="세미연습장2.html" class="nav-link">메인</a>
+          <a href="" class="nav-link">로그인</a>
+          <a href="" class="nav-link">회원가입</a>
+        </nav>
+      </header>
+
+    <div class="main">
+        <section id="section1">
+            <h1>Forever 404는 협업하며</h1>
+            <h1>성장하는 유망주들입니다.</h1><br><br>
+            <p>따뜻한 분위기와, 열정 가득한 팀워크,</p>
+            <p>그리고 소통하는 협업으로 지금도 성장하고있습니다.</p>
+        </section>
+
+        <section id="section2">
+        </section>
+    </div>
+    <div class="profile">
+        <section id="back-end">
+            <h1>back-end Members</h1>
+            <section class="members">
+                <section id="member1">
+                    <img src="resources/family1.jpg" alt="">
+                    <h2>윤유진(조장)</h2>
+                    <ul>
+                        <li>한일1 : (사용한언어)</li>
+                        <li>한일2 : (구축한 코드)</li>
+                        <li>한일3 : (구축한 코드)</li>
+                        <li>한일4 : (구축한 코드)</li>
+                        <li>한일5 : (구축한 코드)</li>
+                    </ul>
+                </section>
+                <section id="member2">
+                    <img src="resources/family2.jpg" alt="">
+                    <h2>박세영</h2>
+                    <ul>
+                        <li>한일1 : (사용한언어)</li>
+                        <li>한일2 : (구축한 코드)</li>
+                        <li>한일3 : (구축한 코드)</li>
+                        <li>한일4 : (구축한 코드)</li>
+                        <li>한일5 : (구축한 코드)</li>
+                    </ul>
+                </section>
+                <section id="member3">
+                    <img src="resources/family3.jpg" alt="">
+                    <h2>김진주</h2>
+                        <ul>
+                            <li>한일1 : (사용한언어)</li>
+                            <li>한일2 : (구축한 코드)</li>
+                            <li>한일3 : (구축한 코드)</li>
+                            <li>한일4 : (구축한 코드)</li>
+                            <li>한일5 : (구축한 코드)</li>
+                        </ul>
+                </section>
+            </section>
+        </section>
+
+        <section id="front-end">
+            <h1>front-end Members</h1>
+            <section class="members">
+                <section id="member4">
+                    <img src="resources/family1.jpg" alt="">
+                    <h2>장영태</h2>
+                    <ul>
+                        <li>한일1 : (사용한언어)</li>
+                        <li>한일2 : (구축한 코드)</li>
+                        <li>한일3 : (구축한 코드)</li>
+                        <li>한일4 : (구축한 코드)</li>
+                        <li>한일5 : (구축한 코드)</li>
+                    </ul>
+                </section>
+                <section id="member5">
+                    <img src="resources/family2.jpg" alt="">
+                    <h2>배영운</h2>
+                    <ul>
+                        <li>한일1 : (사용한언어)</li>
+                        <li>한일2 : (구축한 코드)</li>
+                        <li>한일3 : (구축한 코드)</li>
+                        <li>한일4 : (구축한 코드)</li>
+                        <li>한일5 : (구축한 코드)</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        root: null, 
+        rootMargin: '0px', 
+        threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                entry.target.classList.remove('fade-out');
+            } else {
+                entry.target.classList.add('fade-out');
+                entry.target.classList.remove('fade-in');
+            }
+        });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('#back-end .members section');
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+
+    const elements2 = document.querySelectorAll('#front-end .members section, #back-end .members section');
+    elements2.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
+</script>
+</body>
+</html>

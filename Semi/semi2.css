@@ -1,0 +1,249 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 15px;
+  color: white;
+}
+
+.red {
+  color: darkred;
+  font-weight: bold;
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.section1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url(semiResources/제주1\(섹션1\).jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section1 h1{
+  padding: 20px;
+}
+
+.section1 .scroll {
+  padding-top: 50px;
+}
+
+.section2 {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url(semiResources/캘린더3\(섹션2\).jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section3 {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url(semiResources/호수1\(섹션3\).jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section4 {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(semiResources/서울2\(섹션4\).jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  min-width: 100%;
+  background-color: violet;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../resources/서울2.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+button {
+  position: absolute;
+  top: 50%;
+  transform: tanslateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 2rem;
+}
+
+#Btn1 {
+  left:10px;
+}
+
+#Btn2 {
+  right: 10px;
+}
+#section5 h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+#section5 p {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  padding: 15px;
+}
+
+#section5 img {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
+  padding-left: 400px;
+  padding-top:15px;
+}
+
+#section6 {
+  height: 500px;
+  display: flex;
+}
+
+#textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#textBox h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 15px;
+}
+
+#textBox p {
+  font-size: 1.5rem;
+  color: gray;
+  padding: 15px;
+}
+
+#positionBox {
+  position: relative;
+  background-color: skyblue;
+}
+
+.box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box1{
+  left: 10%;
+  top: 10%;
+  background-color: white;
+  z-index: 1;
+
+}
+
+#box2 img{
+  left: 40%;
+  top: 40%;
+  background-color: blue;
+  z-index: 2;
+}
+
+#box1 img {
+  width: 300px;
+  height: auto;
+  object-fit: unset;
+}
+
+#box2 img {
+  width: 300px;
+  height: auto;
+}

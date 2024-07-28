@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+   <link rel="stylesheet" href="2.CSS/css/reset.css">
+    <link rel="stylesheet" href="세미연습장2.css">
+  </head>
+  <body>
+    <header id="header">
+      <a href="">
+        <h1 class="nav-link">
+          Forever <span class="red">4</span><span class="white">0</span
+          ><span class="red">4</span>
+        </h1></a
+      >
+      <nav id="a2">
+        <a href="세미연습장3.html" class="nav-link">개발자</a>
+        <a href="" class="nav-link">로그인</a>
+        <a href="" class="nav-link">회원가입</a>
+      </nav>
+    </header>
+
+
+    <div className="main">
+      <div id="carousel">
+        <button id="prevBtn">&#10094;</button>
+        <div id="section-container">
+          <section class="section" id="section1">
+            <h1>트러블 없는 트래블 스케쥴러,(적당한 멘트)</h1>
+            <br />
+            <h1>"SEMI PROJECT"<프로젝트제목></h1>
+            <h1><a id="scrollLink">자세히 보기</a></h1>
+            <img src="../front-end-workspace/resources/제주1.jpg" alt="">
+          </section>
+          <section class="section" id="section2">
+            <h1>자랑할 기능1(적당한 멘트)</h1>
+          </section>
+          <section class="section" id="section3">
+            <h1>자랑할 기능2(적당한 멘트)</h1>
+          </section>
+          <section class="section" id="section4">
+            <h1>자랑할 기능3(적당한 멘트)</h1>
+          </section>
+        </div>
+        <button id="nextBtn">&#10095;</button>
+      </div>
+      <section id="section5">
+        <h1>이 스케쥴러의 장점</h1>
+        <p>이렇게 써보세요(적당한 멘트)</p>
+        <img src="resources/스케줄1.jpg" alt="" />
+      </section>
+      <section id="section6">
+        <div id="textBox">
+          <h1>이외의 유용한 기능들(적당한 멘트)</h1>
+          <p>이렇게도 활용해보세요 lorem</p>
+        </div>
+        <div id="positionBox">
+          <div class="box" id="box1">
+            <img src="resources/캘린더2(box1).jpg" alt="">
+          </div>
+          <div class="box" id="box2">
+            <img src="resources/비행기2.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const header = document.getElementById("header");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const spans = document.querySelectorAll(".red");
+    const span = document.querySelectorAll(".white");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        header.style.backgroundColor = "white";
+        navLinks.forEach((link) => {
+          link.style.color = "black";
+        });
+      });
+
+      link.addEventListener("mouseout", () => {
+        header.style.backgroundColor = "transparent";
+        navLinks.forEach((link) => {
+          link.style.color = "white";
+        });
+      });
+    });
+
+    
+    navLinks.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        header.style.backgroundColor = "white";
+        spans.forEach((link) => {
+          link.style.color = "black";
+        });
+      });
+
+      link.addEventListener("mouseout", () => {
+        header.style.backgroundColor = "transparent";
+        spans.forEach((link) => {
+          link.style.color = "darkred";
+        });
+      });
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        header.style.backgroundColor = "white";
+        span.forEach((link) => {
+          link.style.color = "black";
+        });
+      });
+
+      link.addEventListener("mouseout", () => {
+        header.style.backgroundColor = "transparent";
+        span.forEach((link) => {
+          link.style.color = "white";
+        });
+      });
+    });
+
+
+
+    let currentIndex = 0;
+    const sections = document.querySelectorAll(".section");
+    const totalSections = sections.length;
+    const sectionContainer = document.getElementById("section-container");
+
+    document
+      .getElementById("nextBtn")
+      .addEventListener("click", showNextSection);
+    document
+      .getElementById("prevBtn")
+      .addEventListener("click", showPrevSection);
+
+    function showNextSection() {
+      currentIndex = (currentIndex + 1) % totalSections;
+      updateCarousel();
+    }
+
+    function showPrevSection() {
+      currentIndex = (currentIndex - 1 + totalSections) % totalSections;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      sectionContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(showNextSection, 4000);
+
+    document
+      .getElementById("scrollLink")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        document
+          .getElementById("section5")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('#header');
+    const section5 = document.querySelector('#section5');
+
+    const handleScroll = () => {
+        const section5Rect = section5.getBoundingClientRect();
+        if (section5Rect.top <= 0) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+});
+  </script>
+</html>

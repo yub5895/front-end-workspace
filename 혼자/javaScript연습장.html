@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javaScript연습장.css">
+</head>
+<body>
+
+    <div style="overflow:hidden">
+        <div class="container">
+        <div class="inner">
+            <img src="../resources/제주1.jpg" alt="">
+        </div>
+        <div class="inner">
+            <img src="../resources/부산1.jpg" alt="">
+        </div>
+        <div class="inner">
+            <img src="../resources/캘린더3.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<button class="버튼1">1</button>
+<button class="버튼2">2</button>
+<button class="버튼3">3</button>
+
+<section id="menu">
+    <div class="menu__logo">logo</div>
+    <ul class="menu__categories">
+      <li class="menu__items">Home</li>
+      <li class="menu__items">About me</li>
+      <li class="menu__items">Skills</li>
+      <li class="menu__items">My work</li>
+      <li class="menu__items">Contact</li>
+    </ul>
+  </section>
+
+<script>
+    document.querySelector('.버튼2').addEventListener('click', function() {
+        document.querySelector('.container').style.transform = 'translate(-100vw)';
+    })
+
+    document.querySelector('.버튼3').addEventListener('click', function() {
+        document.querySelector('.container').style.transform = 'translate(-200vw)';
+    })
+
+    const menu = document.querySelector('#menu');
+const menuHeight = menu.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > menuHeight) {
+    menu.classList.add('active');
+  } else {
+    menu.classList.remove('active');
+  }
+});
+</script>
+</body>
+</html>

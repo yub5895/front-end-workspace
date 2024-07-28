@@ -1,0 +1,43 @@
+.container {
+    width: 300vw;
+    transition: transform 0.5s;
+}
+
+.inner {
+    width: 100vw;
+    float: left;
+}
+
+.inner img{
+    width: 100%
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    transition: color 0.3s;
+    z-index: 1000;
+}
+
+section {
+    height: 100vh;
+    padding: 20px;
+}
+
+#section5 {
+    background-color: lightgrey;
+}
+
+.header-changed {
+    color: black;
+}

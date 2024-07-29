@@ -127,13 +127,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-HEAD HEAD a {
-  color: white;
-  text-decoration: none;
-}
+
 a {
   text-decoration: none;
-  color: wihte;
+  color: black;
 }
 * {
   box-sizing: border-box;

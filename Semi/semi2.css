@@ -4,7 +4,7 @@ header {
   height: 80px;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   transition: background-color 0.3s ease;
   z-index: 2;
 }
@@ -50,7 +50,7 @@ nav a {
   font-weight: bold;
 }
 
-.section1 h1{
+.section1 h1 {
   padding: 20px;
 }
 
@@ -155,7 +155,7 @@ button {
 }
 
 #Btn1 {
-  left:10px;
+  left: 10px;
 }
 
 #Btn2 {
@@ -183,7 +183,7 @@ button {
   height: 80%;
   justify-content: center;
   padding-left: 400px;
-  padding-top:15px;
+  padding-top: 15px;
 }
 
 #section6 {
@@ -222,15 +222,14 @@ button {
   align-items: center;
 }
 
-#box1{
+#box1 {
   left: 10%;
   top: 10%;
   background-color: white;
   z-index: 1;
-
 }
 
-#box2 img{
+#box2 img {
   left: 40%;
   top: 40%;
   background-color: blue;

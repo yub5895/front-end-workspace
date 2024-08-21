@@ -1,0 +1,127 @@
+#header1 {
+  background-color: violet;
+  height: 80px;
+  display: flex;
+}
+
+#header1 #section1 {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section1 button {
+  cursor: pointer;
+}
+
+#section1 button {
+  width: 50px;
+  height: 50px;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+#header1 #section2 {
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+  width: 90%;
+  display: flex;
+}
+
+#hour {
+  background-color: transparent;
+  justify-content: center;
+  padding-left: 450px;
+  border: none;
+  width: 100%;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#header2 {
+  background-color: skyblue;
+  height: 80px;
+  display: flex;
+}
+
+#AMPM {
+  margin-top: 18px;
+  margin-left: 30px;
+}
+
+#AMPM button {
+  background-color: skyblue;
+  border: solid, 2px, white;
+  cursor: pointer;
+  color: white;
+}
+
+#AMPM #AM {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: none;
+}
+
+#AMPM #PM {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#header2 #section3 {
+  background-color: yellowgreen;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#section4 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#minute {
+  background-color: transparent;
+  justify-content: center;
+  padding-left: 450px;
+  border: none;
+  width: 100%;
+  color: black;
+}
+
+main {
+  background-color: beige;
+  height: 700px;
+}
+
+.section {
+  background-color: aqua;
+  margin: 30px;
+  height: 200px;
+  display: flex;
+}
+
+.img {
+  width: 200px;
+  height: 100%;
+  background-color: chartreuse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  background-color: indianred;
+  height: 30px;
+}
+
+.write {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

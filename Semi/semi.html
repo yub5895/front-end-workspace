@@ -7,15 +7,25 @@
 
     <link rel="stylesheet" href="../2.CSS/css/reset.css" />
     <link rel="stylesheet" href="../semi/semi.css" />
+    <script
+    src="https://kit.fontawesome.com/ef885bd654.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
   </head>
   <body>
     <header id="header">
+      <nav id="a1">
       <a href="">
         <h1 class="nav-link">
-          Forever <span class="red">4</span><span class="white">0</span
-          ><span class="red">4</span>
-        </h1></a
-      >
+          Forever
+        </h1>
+        </a >
+        <a href=""><img src="semiResources/404.png" alt=""></a>
+      </nav>
+
       <nav id="a2">
         <button
           type="button"
@@ -25,7 +35,7 @@
           개발자
         </button>
         <button type="button" class="nav-link" id="login">로그인</button>
-        <button type="button" class="nav-link" onclick="location.href=''">
+        <button type="button" class="nav-link" onclick="location.href='register.html'">
           회원가입
         </button>
       </nav>
@@ -34,20 +44,19 @@
     <div className="main">
       <div id="carousel">
         <button id="prevBtn" class="button2">&#10094;</button>
-        <div id="section-container">
+        <div id="sectioncontainer">
           <section class="section" id="section1">
             <h1>트러블 없는 트래블 스케줄러,(적당한 멘트)</h1>
             <br />
             <h1>"SEMI PROJECT"<프로젝트제목></h1>
             <h2><a id="scrollLink">자세히 보기</a></h2>
-            <img src="../front-end-workspace/resources/제주1.jpg" alt="" />
           </section>
           <section class="section" id="section2">
             <h1>심플한 여행스케줄러,</h1>
             <h1>복잡한 방식에 지친 당신을 위한.(적당한 멘트)</h1>
           </section>
           <section class="section" id="section3">
-            <h1>유용한 기능1(적당한 멘트)</h1>
+            <h1>그룹의 스케줄을 한 눈에!</h1>
           </section>
           <section class="section" id="section4">
             <h1>유용한 기능2(적당한 멘트)</h1>
@@ -56,39 +65,75 @@
         <button id="nextBtn" class="button2">&#10095;</button>
       </div>
       <section id="section5">
-        <h1>이 스케줄러의 장점</h1>
-        <p>전체 여행 일정을 한눈에 !</p>
-        <img src="../resources/스케줄1.jpg" alt="" />
+        <div class=schedule data-aos="fade-down" data-aos-delay="300" data-aos-duration="800">
+          <h1>이 스케줄러의 장점</h1>
+          <p>전체 여행 일정을 한눈에 !</p>
+        </div>
+
+        <div class="schedule" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" >
+          <img src="../resources/스케줄1.jpg" alt="" id="scheduleimg"/>
+        </div>
       </section>
       <section id="section6">
-        <div id="textBox">
+        <div id="textBox" data-aos="fade-right"  data-aos-delay="300" data-aos-duration="800">
           <h1>이 외의 유용한 기능들</h1>
           <p>세부 일정을 요일, 시간 별로 확인해 보세요.</p>
           <p>자주 잊어먹는 분들을 위한 알람 기능</p>
         </div>
         <div id="positionBox">
-          <div class="box" id="box1">
+          <div class="box" id="box1" data-aos="fade-left"  data-aos-delay="300" data-aos-duration="800">
             <img src="../resources/캘린더2(box1).jpg" alt="" />
           </div>
-          <div class="box" id="box2">
+          <div class="box" id="box2" data-aos="fade-left"  data-aos-delay="500" data-aos-duration="800">
             <img src="../resources/비행기2.jpg" alt="" />
           </div>
         </div>
       </section>
 
 
-    <div class="modal">
-      <div class="modal_body">
-        <h2>모달창 제목</h2>
-        <p>모달창 내용</p>
+      <div class="modal">
+        <div class="modal_body">
+          <div class="back_to_menu">
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </div>
+          <div class="mainsbj">
+            <h1>로그인</h1>
+          </div>
+          <div class="user_login">
+            <i class="fa-regular fa-user"></i>
+            <input
+              type="text"
+              class="user_id_input"
+              id="id"
+              name="id"
+              placeholder="아이디"
+              required
+            />
+          </div>
+          <div class="user_login">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="text"
+              class="user_password_input"
+              id="password"
+              name="password"
+              placeholder="비밀번호"
+              required
+            />
+          </div>
+          <div class="login_btn">
+            <button type="button" id="login2">로그인</button>
+          
+          </div>
+          <div class="kkt_login_btn">
+            <img src="semiResources/kakao_login_large_wide.png" alt="" />
+          </div>
+        </div>
       </div>
-    </div>
   </body>
   <script>
     const header = document.getElementById("header");
     const navLinks = document.querySelectorAll(".nav-link");
-    const spans = document.querySelectorAll(".red");
-    const span = document.querySelectorAll(".white");
 
     navLinks.forEach((link) => {
       link.addEventListener("mouseover", () => {
@@ -101,38 +146,6 @@
       link.addEventListener("mouseout", () => {
         header.style.backgroundColor = "transparent";
         navLinks.forEach((link) => {
-          link.style.color = "white";
-        });
-      });
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("mouseover", () => {
-        header.style.backgroundColor = "white";
-        spans.forEach((link) => {
-          link.style.color = "black";
-        });
-      });
-
-      link.addEventListener("mouseout", () => {
-        header.style.backgroundColor = "transparent";
-        spans.forEach((link) => {
-          link.style.color = "darkred";
-        });
-      });
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("mouseover", () => {
-        header.style.backgroundColor = "white";
-        span.forEach((link) => {
-          link.style.color = "black";
-        });
-      });
-
-      link.addEventListener("mouseout", () => {
-        header.style.backgroundColor = "transparent";
-        span.forEach((link) => {
           link.style.color = "white";
         });
       });
@@ -141,7 +154,7 @@
     let currentIndex = 0;
     const sections = document.querySelectorAll(".section");
     const totalSections = sections.length;
-    const sectionContainer = document.getElementById("section-container");
+    const sectionContainer = document.getElementById("sectioncontainer");
 
     document
       .getElementById("nextBtn")
@@ -206,5 +219,8 @@
         modal.style.display = "none";
       }
     });
+    
+AOS.init();
+      
   </script>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.CSS/css/reset.css" />
+    <link rel="stylesheet" href="detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="group"><button type="text">그룹</button></div>
+      <section id="date">
+        <h1>2024-08-05</h1>
+      </section>
+    </header>
+
+    <main>
+      <section class="section1">
+        <div id="pay">
+          <p>총 지불금액 : 100,000원</p>
+          <br />
+          <p>남은금액 : 250,000원</p>
+        </div>
+        <div id="time1" class="time"><p>09:00</p></div>
+      </section>
+
+      <button id="nextBtn1" class="button1">&#10095;</button>
+
+      <section class="section">
+        <div class="img">image</div>
+        <div>
+          <h2>타이틀</h2>
+          <p>위치</p>
+          <p>영업시간</p>
+          <p>지불품목, 사용금액</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="img">image</div>
+        <div>
+          <h2>타이틀</h2>
+          <p>위치</p>
+          <p>영업시간</p>
+          <p>지불품목, 사용금액</p>
+        </div>
+      </section>
+      <button id="nextBtn2" class="button2">&#10094;</button>
+
+      <section class="time" id="time2">
+        <div><p>18:00</p></div>
+      </section>
+    </main>
+
+    <section id="btncontainer">
+      <button id="button3" class="btn1">일정 추가</button>
+      <button id="button4" class="btn1">사진 추가</button>
+      <button id="button5" class="btn1">지불 품목</button>
+      <button id="plus" class="btn">
+        <i class="bi bi-plus-circle-fill"></i>
+      </button>
+    </section>
+
+    <div id="modal1" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+        <h2>일정 추가</h2>
+        <p>시작시간</p>
+        <p>종료시간</p>
+        <p>위치</p>
+        <p>영업시간</p>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+      </div>
+      <h2>사진 추가</h2>
+      <p>213</p>
+      <p>456</p>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+      </div>
+      <h2>지불 품목</h2>
+      <p>123</p>
+      <p>456</p>
+    </div>
+
+    <script>
+      $(".btn").click((e) => {
+        let content = $(".btn1");
+
+        if (content.css("display") === "none") {
+          content.slideDown(150);
+        } else {
+          content.slideUp(150);
+        }
+      });
+
+      $("#button3").click(function () {
+        $("#modal1").css("display", "block");
+      });
+
+      $(".close").click(function () {
+        $(".modal").css("display", "none");
+      });
+
+      $(window).click(function (event) {
+        if ($(event.target).is(".modal")) {
+          $(".modal").css("display", "none");
+        }
+      });
+
+      $(document).keydown(function (event) {
+        if (event.keyCode == 27) {
+          $(".modal").css("display", "none");
+        }
+      });
+
+      $("#button4").click(function () {
+        $("#modal2").css("display", "block");
+      });
+
+      $("#button5").click(function () {
+        $("#modal3").css("display", "block");
+      });
+    </script>
+  </body>
+</html>

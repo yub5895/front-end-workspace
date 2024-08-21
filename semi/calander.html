@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.CSS/css/reset.css" />
+    <link rel="stylesheet" href="../semi/calander.css" />
+    <script src="../semi/calander.js"></script>
+    <script src="/semi/index.global.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="addgroup">
+        <button id="addgroup"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <div class="modalgroup">
+        <button id="groupmake" class="addgroup2">
+          <i class="fa-solid fa-plus"></i>
+          <p>그룹 생성</p>
+        </button>
+
+        <button id="grouppart" class="addgroup2">
+          <i class="fa-solid fa-plus"></i>
+          <p>그룹 참가</p>
+        </button>
+      </div>
+      <div class="group" id="group1">
+        <button class="group2">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <span>그룹1</span>
+      </div>
+      <div class="group" id="group2">
+        <button class="group2">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <span>그룹2</span>
+      </div>
+      <div class="group" id="group3">
+        <button class="group2">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <span>그룹3</span>
+      </div>
+      <div class="group" id="group4">
+        <button class="group2">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <span>3</span>
+      </div>
+
+      <div class="mymodal">
+        <button type="button" onclick="location.href='/logout'" id="logout">
+          로그아웃
+        </button>
+      </div>
+
+      <div class="group" id="group"></div>
+      <div class="user">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="group" id="group5">
+        <button class="group2">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <span>123</span>
+      </div>
+      <div class="more">
+        <i class="fa-solid fa-ellipsis-vertical" id="dots"></i>
+      </div>
+    </header>
+    <div id="calendar-container">
+      <div id="calendar"></div>
+    </div>
+
+    <div id="modal1" class="modal">
+      <div class="modalcontent">
+        <p class="close">&times</p>
+        <h2>그룹 추가</h2>
+        <hr />
+        <br />
+        <p>
+          새로운 그룹에 이름을 부여해 <br />
+          동료들과 함께해 보세요
+        </p>
+        <section class="mid">
+          <h3>새 그룹 명</h3>
+          <br />
+          <input type="text" />
+          <div class="add">
+            <button id="add" class="add2">만들기</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modalcontent">
+        <p class="close">&times</p>
+        <h2>그룹 참가</h2>
+        <hr />
+        <br />
+        <p>
+          아래에 전달받은 그룹코드를 입력해<br />
+          그룹에 참여해보세요
+        </p>
+        <section class="mid">
+          <h3>그룹 코드</h3>
+          <br />
+          <input type="text" placeholder="ex) Forever404" id="inputatt" />
+          <div class="add">
+            <button id="attend" class="add2">그룹 참가하기</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+        <div class="group3" id="group6">
+          <button class="group2">
+            <i class="fa-solid fa-user-group"></i>
+          </button>
+          <span>그룹1</span>
+        </div>
+        <div class="group3" id="group7">
+          <button class="group2">
+            <i class="fa-solid fa-user-group"></i>
+          </button>
+          <span>그룹2</span>
+        </div>
+        <div class="group3" id="group8">
+          <button class="group2">
+            <i class="fa-solid fa-user-group"></i>
+          </button>
+          <span>그룹3</span>
+        </div>
+        <div class="group3" id="group9">
+          <button class="group2">
+            <i class="fa-solid fa-user-group"></i>
+          </button>
+          <span>3</span>
+        </div>
+        <div class="group3" id="group10">
+          <button class="group2">
+            <i class="fa-solid fa-user-group"></i>
+          </button>
+          <p class="groupname">123</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="bigModal" style="display: none">
+      <div id="modalContent3">
+        <header class="mdl-header">
+          <p class="head-wrd">일정 추가하기</p>
+          <i class="fa-solid fa-xmark" id="X"></i>
+        </header>
+        <button class="modsection" id="one"></button>
+        <button class="modsection" id="two"></button>
+        <button class="modsection" id="three"></button>
+        <button class="modsection" id="four"></button>
+        <button class="modsection" id="five"></button>
+        <button class="modsection" id="six">추가</button>
+      </div>
+    </div>
+
+    <div id="detModal" style="display: none">
+      <div id="modalContent4">
+        <header class="mdl-header2">
+          <p class="head-wrd2">세부 일정 추가</p>
+          <i class="fa-solid fa-xmark" id="X2"></i>
+        </header>
+        <div class="inpt-brder" id="title">
+          <i class="fa-solid fa-pencil"></i>
+          <input type="text" placeholder="일정 이름" class="tripinfo" />
+        </div>
+        <div class="inpt-brder">
+          <i class="fa-solid fa-plane-departure"></i>
+          <input
+            type="date"
+            placeholder="시작 날짜"
+            class="tripinfo"
+            max="9999-12-31"
+          />
+        </div>
+        <div class="inpt-brder">
+          <i class="fa-solid fa-plane-arrival"></i>
+          <input
+            type="date"
+            placeholder="종료 날짜"
+            class="tripinfo"
+            max="9999-12-31"
+          />
+        </div>
+        <div class="inpt-brder" id="date">
+          <i class="fa-solid fa-coins"></i>
+          <input type="text" placeholder="여행 총 경비" class="tripinfo" />
+        </div>
+        <div class="inpt-brder" id="date">
+          <i class="fa-solid fa-helmet-safety"></i>
+          <input type="text" placeholder="추후 추가예정" class="tripinfo" />
+        </div>
+        <div><button class="submit" id="final">추가하기</button></div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/ef885bd654.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../semi/calander.js"></script>
+
+    <script></script>
+  </body>
+</html>

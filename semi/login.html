@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="../2.CSS/css/reset.css" />
+    <link rel="stylesheet" href="login.css" />
+    <script
+      src="https://kit.fontawesome.com/ef885bd654.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal_body">
+        <div class="back_to_menu">
+          <a href=""><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="mainsbj">
+          <h1>로그인</h1>
+        </div>
+        <div class="user_login">
+          <i class="fa-regular fa-user"></i>
+          <input
+            type="text"
+            class="user_id_input"
+            id="id"
+            name="id"
+            placeholder="아이디"
+            required
+          />
+        </div>
+        <div class="user_login">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="text"
+            class="user_password_input"
+            id="password"
+            name="password"
+            placeholder="비밀번호"
+            required
+          />
+        </div>
+        <div class="login_btn">
+          <input type="submit" value="로그인" />
+        </div>
+        <div class="kkt_login_btn">
+          <img src="semiResources/kakao_login_large_wide.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      src = "https://kit.fontawesome.com/ef885bd654.js";
+      crossorigin = "anonymous";
+
+      const login = document.querySelector(".login");
+      const openLogin = document.querySelector(".open_login");
+
+      openLogin.addEventListener("click", () => {
+        login.style.display = "flex";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../혼자/jQuery연습장2.css" />
+  </head>
+  <body>
+    <header>
+
+      <button id="addgroup">열기</button>
+
+    <div id="modal1" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+        <h2>일정 추가</h2>
+        <hr />
+        <div class="ps">
+          <p>시작시간 :</p>
+          <select id="start">
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+          </select>
+        </div>
+        <div class="ps">
+          <p>종료시간 :</p>
+          <select id="finish">
+            <option value="09:00">18:00</option>
+            <option value="10:00">19:00</option>
+          </select>
+        </div>
+        <div class="ps">
+          <p>위치 :</p>
+          <input type="text" />
+        </div>
+        <div class="ps">
+          <p>영업시간 :</p>
+          <input type="text" />
+        </div>
+        <div class="add">
+          <button id="schedule" class="add2">추가</button>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      $("#addgroup").click(function () {
+  $("#modal1").css("display", "block");
+});
+
+$(".close").click(function () {
+  $(".modal").css("display", "none");
+});
+
+$(window).click(function (event) {
+  if ($(event.target).is(".modal")) {
+    $(".modal").css("display", "none");
+  }
+});
+
+$(document).keydown(function (event) {
+  if (event.keyCode == 27) {
+    $(".modal").css("display", "none");
+  }
+});
+    </script>
+  </body>
+</html>

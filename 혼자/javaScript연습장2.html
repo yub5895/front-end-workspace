@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="javaScript연습장2.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-select-container">
+      <div id="custom-select-box" class="custom-select-box">
+        <span id="selected-option">Select an option</span>
+        <div id="custom-options" class="custom-options">
+          <div class="custom-option">Option 1</div>
+          <div class="custom-option">Option 2</div>
+          <div class="custom-option">Option 3</div>
+          <div class="custom-option">Option 4</div>
+          <div class="custom-option">Option 5</div>
+          <div class="custom-option">Option 6</div>
+          <div class="custom-option">Option 7</div>
+          <div class="custom-option">Option 8</div>
+          <div class="custom-option">Option 9</div>
+          <div class="custom-option">Option 10</div>
+          <div class="custom-option">Option 11</div>
+          <div class="custom-option">Option 12</div>
+          <div class="custom-option">Option 13</div>
+          <div class="custom-option">Option 14</div>
+          <div class="custom-option">Option 15</div>
+          <div class="custom-option">Option 16</div>
+          <div class="custom-option">Option 17</div>
+          <div class="custom-option">Option 18</div>
+          <div class="custom-option">Option 19</div>
+          <div class="custom-option">Option 20</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        const $selectBox = $("#custom-select-box");
+        const $optionsContainer = $("#custom-options");
+        const $options = $optionsContainer.find(".custom-option");
+        const $selectedOption = $("#selected-option");
+        const optionsToShow = 5;
+
+        // Show the first 5 options initially
+        function showOptions(startIndex = 0) {
+          $options.hide();
+          $options.slice(startIndex, startIndex + optionsToShow).show();
+        }
+
+        let currentIndex = 0;
+        showOptions(currentIndex);
+
+        // Toggle options visibility when clicking on the select box
+        $selectBox.on("click", function () {
+          $optionsContainer.toggle();
+        });
+
+        // Handle option click
+        $options.on("click", function () {
+          const selectedText = $(this).text();
+          $selectedOption.text(selectedText);
+          $optionsContainer.hide();
+        });
+
+        // Handle scrolling to load more options
+        $optionsContainer.on("scroll", function () {
+          const scrollTop = $(this).scrollTop();
+          const scrollHeight = $(this)[0].scrollHeight;
+          const containerHeight = $(this).height();
+
+          if (scrollTop + containerHeight >= scrollHeight) {
+            currentIndex += optionsToShow;
+            if (currentIndex < $options.length) {
+              showOptions(currentIndex);
+            }
+          }
+        });
+
+        // Hide options when clicking outside
+        $(document).on("click", function (event) {
+          if (!$(event.target).closest("#custom-select-box").length) {
+            $optionsContainer.hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

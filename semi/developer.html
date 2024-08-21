@@ -6,6 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../2.CSS/css/reset.css" />
     <link rel="stylesheet" href="developer.css" />
+    <script
+      src="https://kit.fontawesome.com/ef885bd654.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="header">
@@ -24,7 +28,11 @@
           개발자
         </button>
         <button type="button" class="nav-link" id="login">로그인</button>
-        <button type="button" class="nav-link" onclick="location.href=''">
+        <button
+          type="button"
+          class="nav-link"
+          onclick="location.href='register.html'"
+        >
           회원가입
         </button>
       </nav>
@@ -47,7 +55,7 @@
         <section class="members">
           <section id="member1">
             <img src="../resources/family1.jpg" alt="" />
-            <h2>윤유진(조장)</h2>
+            <h2>윤유진(팀장)</h2>
             <ul>
               <li>한일1 : (사용한언어)</li>
               <li>한일2 : (구축한 코드)</li>
@@ -107,18 +115,61 @@
             </ul>
           </section>
         </section>
-        <section id="blank">
-          <h1>　　　　　</h1>
-        </section>
+        <section id="blank"></section>
       </section>
     </div>
 
     <div class="modal">
       <div class="modal_body">
-        <h2>모달창 제목</h2>
-        <p>모달창 내용</p>
+        <div class="back_to_menu">
+          <a href=""><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <div class="mainsbj">
+          <h1>로그인</h1>
+        </div>
+        <div class="user_login">
+          <i class="fa-regular fa-user"></i>
+          <input
+            type="text"
+            class="user_id_input"
+            id="id"
+            name="id"
+            placeholder="아이디"
+            required
+          />
+        </div>
+        <div class="user_login">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="text"
+            class="user_password_input"
+            id="password"
+            name="password"
+            placeholder="비밀번호"
+            required
+          />
+        </div>
+        <div class="login_btn">
+          <input type="submit" value="로그인" />
+        </div>
+        <div class="kkt_login_btn">
+          <img src="semiResources/kakao_login_large_wide.png" alt="" />
+        </div>
       </div>
     </div>
+
+    <section id="side">
+      <button class="sidebtn" id="sidebtn1">TOP</button>
+      <button class="sidebtn" id="sidebtn2">로그인</button>
+      <hr />
+      <button
+        class="sidebtn"
+        id="sidebtn3"
+        onclick="location.href='register.html'"
+      >
+        회원가입
+      </button>
+    </section>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -148,7 +199,7 @@
         });
 
         const elements2 = document.querySelectorAll(
-          "#front-end .members section, #back-end .members section"
+          "#front-end .members section"
         );
         elements2.forEach((element) => {
           observer.observe(element);
@@ -162,12 +213,27 @@
         modal.style.display = "flex";
       });
 
-      // ESC 키 누르면 모달창이 꺼지도록
+      const modal2 = document.querySelector(".modal");
+      const btnOpenModal2 = document.querySelector("#sidebtn2");
+
+      btnOpenModal2.addEventListener("click", () => {
+        modal2.style.display = "flex";
+      });
+
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.style.display === "flex") {
           modal.style.display = "none";
         }
       });
+
+      document
+        .getElementById("sidebtn1")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document
+            .getElementById("header")
+            .scrollIntoView({ behavior: "smooth" });
+        });
     </script>
   </body>
 </html>

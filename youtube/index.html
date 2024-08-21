@@ -1,15 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YouTube</title>
     <link
       rel="icon"
       href="https://www.youtube.com/s/desktop/ae4ecf92/img/favicon_144x144.png"
     />
-    <link rel="stylesheet" href="../2.CSS/css/reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="style1.css" />
     <script
       src="https://kit.fontawesome.com/ef885bd654.js"
       crossorigin="anonymous"
@@ -79,12 +82,15 @@
         </a>
       </div>
       <div class="header-center">
-        <input type="text" placeholder="검색" /><button type="button">
+        <input type="text" placeholder="검색" />
+        <button type="button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div class="header-end">
-        <button type="button"><i class="fa-solid fa-user"></i></button>
+        <button type="button">
+          <i class="fa-solid fa-user"></i>
+        </button>
       </div>
     </header>
     <main>
@@ -105,9 +111,29 @@
           <a href="">게임</a>
           <a href="">뉴스</a>
           <a href="">라이브</a>
-          <a href="">야생동물</a>
+          <a href="">야생생물</a>
         </nav>
-        <section></section>
+        <section>
+          <c:forEach items="${list}" var="video">
+            <div class="video-card">
+              <div class="video-main">
+                <img src="http://192.168.10.51:8082/thumbnail/akmu.webp" />
+                <video
+                  src="http://192.168.10.51:8082/video/AKMU1.mp4"
+                  controls
+                ></video>
+              </div>
+              <div class="video-info">
+                <img src="http://192.168.10.51:8082/channel/akmu.jpg" />
+                <div class="video-desc">
+                  <h2>비디오 타이틀</h2>
+                  <p>채널명</p>
+                  <p>조회수 0ㆍ1일전</p>
+                </div>
+              </div>
+            </div>
+          </c:forEach>
+        </section>
       </div>
     </main>
   </body>

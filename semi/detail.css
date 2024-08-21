@@ -1,0 +1,229 @@
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  border-bottom: 2px solid lightgray;
+  font-family: "Dongle", sans-serif;
+  font-size: 5rem;
+  background-color: black;
+  color: white;
+}
+
+header #group {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid lightgray;
+}
+
+header button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+header h1 {
+  padding-left: 700px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.section1 {
+  display: flex;
+}
+
+#pay {
+  width: 400px;
+  border: 1px solid lightgray;
+  margin: 30px;
+  padding: 30px;
+  font-size: 2.5rem;
+  position: fixed;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  font-family: "Dongle", sans-serif;
+  background-color: white;
+  color: black;
+}
+
+#time1 {
+  padding-top: 30px;
+  padding-left: 300px;
+  margin-bottom: -20px;
+}
+
+.time {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 730px;
+  font-family: "Dongle", sans-serif;
+}
+
+.time p {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.section {
+  display: flex;
+  margin: 30px;
+  width: 1000px;
+  height: 200px;
+  margin-left: 500px;
+  margin-top: 30px;
+  border: 2px solid lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Dongle", sans-serif;
+}
+
+.section .img {
+  background-color: lightgray;
+  height: 150px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px;
+  font-size: 2rem;
+}
+
+.section h2 {
+  padding-top: 10px;
+  height: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.section p {
+  padding-top: 25px;
+  font-size: 1.5rem;
+}
+#plus {
+  background-color: transparent;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border: none;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+
+#time2 {
+  margin-left: 960px;
+}
+
+@media screen and (max-width: 1200px) {
+  #plus {
+    display: none;
+  }
+  .btn1 {
+    display: none;
+  }
+}
+
+.dongle-bold {
+  font-family: "Dongle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.button2 {
+  display: flex;
+  background-color: transparent;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 4rem;
+}
+.button1 {
+  display: flex;
+  background-color: transparent;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 4rem;
+}
+
+#nextBtn1 {
+  right: 10px;
+}
+
+#nextBtn2 {
+  left: 10px;
+}
+
+#btncontainer {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  bottom: 130px;
+  right: 40px;
+}
+
+.btn1 {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: none;
+  border-bottom: none;
+}
+
+#button5 {
+  border-bottom: 2px solid black;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalcontent {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #999;
+  width: 25%;
+}
+
+.close {
+  color: #999;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

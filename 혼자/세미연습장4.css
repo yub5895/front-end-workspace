@@ -1,0 +1,26 @@
+section {
+  position: relative;
+  width: 1000px;
+  height: 300px;
+  padding-top: 300px;
+  border: 2px solid black;
+  z-index: 0;
+
+  margin-top: 100px;
+  align-items: center;
+  min-width: 1000px;
+  margin-left: 600px;
+}
+
+.title {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: 90px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  left: 650px;
+}

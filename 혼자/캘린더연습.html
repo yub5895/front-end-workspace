@@ -14,9 +14,11 @@
       href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="캘린더연습.css" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
     <!-- fullcalendar 언어 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js"></script>
+
     <style>
       /* body 스타일 */
       html,
@@ -32,6 +34,7 @@
         padding-right: 1em;
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body style="padding: 30px">
     <!-- calendar 태그 -->
@@ -63,6 +66,9 @@
             nowIndicator: true, // 현재 시간 마크
             dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
             locale: "ko", // 한국어 설정
+            select: function () {
+              $("#modal1").css("display", "block");
+            },
             eventAdd: function (obj) {
               // 이벤트가 추가되면 발생하는 이벤트
               console.log(obj);
@@ -75,19 +81,7 @@
               // 이벤트가 삭제되면 발생하는 이벤트
               console.log(obj);
             },
-            select: function (arg) {
-              // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
-              var title = prompt("Event Title:");
-              if (title) {
-                calendar.addEvent({
-                  title: title,
-                  start: arg.start,
-                  end: arg.end,
-                  allDay: arg.allDay,
-                });
-              }
-              calendar.unselect();
-            },
+
             // 이벤트
             events: [
               {
@@ -150,6 +144,38 @@
           calendar.render();
         });
       })();
+      // $("#calendar").click(function () {
+      // $("#modal1").css("display", "block");
+      // });
+
+      $(".close").click(function () {
+        $(".modal").css("display", "none");
+      });
+
+      $(window).click(function (event) {
+        if ($(event.target).is(".modal")) {
+          $(".modal").css("display", "none");
+        }
+      });
+
+      $(document).keydown(function (event) {
+        if (event.keyCode == 27) {
+          $(".modal").css("display", "none");
+        }
+      });
     </script>
+
+    <div id="modal1" class="modal">
+      <div class="modalcontent">
+        <span class="close">&times</span>
+        <h2>그룹 추가</h2>
+        <hr />
+        <div class="add">
+          <button id="schedule" class="add2">추가</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="캘린더연습"></script>
   </body>
 </html>

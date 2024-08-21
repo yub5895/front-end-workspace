@@ -10,12 +10,23 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-left: 15px;
+  padding-left: 30px;
   color: white;
+  z-index: 2;
+  display: flex;
+  align-content: center;
+  padding-top: 30px;
 }
 
+header img {
+  margin-top: 20px;
+  padding-left: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: transparent;
+}
 .red {
   color: darkred;
   font-weight: bold;
@@ -36,7 +47,7 @@ nav a {
 
 .section1 {
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: url(semiResources/제주1\(섹션1\).jpg);
+  background-image: url();
   background-blend-mode: color;
   background-size: cover;
   background-position: center;
@@ -60,7 +71,7 @@ nav a {
 
 .section2 {
   background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(semiResources/캘린더3\(섹션2\).jpg);
+  background-image: url();
   background-blend-mode: color;
   background-size: cover;
   background-position: center;
@@ -76,7 +87,7 @@ nav a {
 
 .section3 {
   background-color: rgba(0, 0, 0, 0.2);
-  background-image: url(semiResources/호수1\(섹션3\).jpg);
+  background-image: url();
   background-blend-mode: color;
   background-size: cover;
   background-position: center;
@@ -92,7 +103,7 @@ nav a {
 
 .section4 {
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(semiResources/서울2\(섹션4\).jpg);
+  background-image: url();
   background-blend-mode: color;
   background-size: cover;
   background-position: center;
@@ -128,7 +139,7 @@ nav a {
   min-width: 100%;
   background-color: violet;
   background-color: rgba(0, 0, 0, 0.6);
-  background-image: url(../resources/서울2.jpg);
+  background-image: url();
   background-blend-mode: color;
   background-size: cover;
   height: 100vh;

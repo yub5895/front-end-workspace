@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.slideUp(400);
     }
   }
+
   /*
   document.getElementById("X").addEventListener("click", function () {
     document.getElementById("bigModal").style.display = "none";
@@ -113,6 +114,15 @@ $("#calendar-container").mouseover((e) => {
   }
 });
 
+$("#addgroup").mouseout((e) => {
+  let content = $(".modalgroup");
+
+  if (content.css("display") != "none") {
+    setTimeout(function () {
+      content.fadeOut(200);
+    }, 3000);
+  }
+});
 /*
 $("#calendar-container").mouseout((e) => {
   let content = $(".modalgroup");
@@ -232,4 +242,26 @@ $("#calendar-container").mouseover((e) => {
   if (content.css("display") != "none") {
     content.fadeOut(200);
   }
+});
+
+$(".user").mouseout((e) => {
+  let content = $(".mymodal");
+
+  if (content.css("display") != "none") {
+    setTimeout(function () {
+      content.fadeOut(200);
+    }, 3000);
+  }
+});
+
+$documnet.ready(function () {
+  $("#add2").on("click", function () {
+    const groupName = $("#testGroup").val().trim();
+    if (groupName.length >= 2) {
+      const initials = groupName.subString(0, 2).toUpperCase();
+      $("#group5").text(initials);
+    } else {
+      $("#group5").text("N/A");
+    }
+  });
 });

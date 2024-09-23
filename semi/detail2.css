@@ -43,7 +43,6 @@ header h1 {
 }
 
 #pay {
-  padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.05);
   font-size: 1.8rem;
   border-top-left-radius: 20px;
@@ -53,7 +52,8 @@ header h1 {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   font-family: "Dongle", sans-serif;
   width: 250px;
-  height: 500px;
+  height: 200px;
+  padding: 10px;
 }
 
 #time1 {
@@ -115,16 +115,32 @@ header h1 {
   line-height: 10%;
 }
 #plus {
-  background-color: transparent;
+  background-color: white;
   position: fixed;
   right: 105px;
   bottom: 30px;
   border: none;
   font-size: 4.5rem;
   cursor: pointer;
+  outline: none;
 }
 #plus:hover {
   color: #999;
+}
+
+#imgPlus {
+  margin-top: 35px;
+  margin-left: 540px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#payPlus {
+  margin-left: 180px;
+  margin-top: 40px;
+  width: 45px;
+  cursor: pointer;
 }
 
 #time2 {
@@ -254,11 +270,13 @@ header h1 {
   padding: 20px;
   border: 1px solid #999;
   width: 450px;
-  height: 500px;
+  height: 50vh;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .modal h2 {
@@ -415,4 +433,8 @@ header h1 {
 .ps #reserve:focus {
   border: 3px solid #c2dbfe;
   outline: none;
+}
+
+#imgPlus {
+  border: 2px;
 }

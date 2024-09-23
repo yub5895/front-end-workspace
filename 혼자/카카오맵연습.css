@@ -1,0 +1,34 @@
+header {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#button1 {
+  width: 25px;
+  height: 45px;
+  position: fixed;
+  left: 200px;
+  top: 48%;
+  border: solid 1px lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+#button2 {
+  width: 25px;
+  height: 45px;
+  position: fixed;
+  left: 0;
+  top: 48%;
+  border: solid 1px lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  display: none;
+}

@@ -32,12 +32,10 @@
       <section class="section1">
         <div id="pay">
           <p>남은금액 : 300,000원</p>
-          <br />
           <p>총 지불금액 : 250,000원</p>
-          <br />
           <p>지불품목 : 바닐라라떼, 케이크</p>
-          <br />
           <p>사용금액 : 50,000원</p>
+          <button id="payPlus">추가</button>
         </div>
       </section>
       <div id="time1" class="time"><p>09:00</p></div>
@@ -50,6 +48,7 @@
             <div class="title"><h2>타이틀</h2></div>
             <p>위치</p>
             <p>영업시간</p>
+            <button id="imgPlus">추가</button>
           </div>
         </section>
       </div>
@@ -73,7 +72,7 @@
       <button id="button4" class="btn1">사진 추가</button>
       <button id="button5" class="btn1">지불 품목</button>
       <button id="plus" class="btn">
-        <i class="bi bi-plus-circle-fill"></i>
+        <i class="bi bi-plus-square"></i>
       </button>
     </section>
 
@@ -162,23 +161,61 @@
     </div>
 
     <script>
-      $(".btn").click((e) => {
-        let content = $(".btn1");
+      /*
+            $(".btn").click((e) => {
+              let content = $(".btn1");
 
-        if (content.css("display") === "none") {
-          content.slideDown(150);
-        } else {
-          content.slideUp(150);
-        }
-      });
-      $(window).resize(() => {
-        let content = $(".btn1");
-        if ($(window).width() < 1200) {
-          content.slideUp(150);
-        }
-      });
+              if (content.css("display") === "none") {
+                content.slideDown(150);
+              } else {
+                content.slideUp(150);
+              }
+            });
+            $(window).resize(() => {
+              let content = $(".btn1");
+              if ($(window).width() < 1200) {
+                content.slideUp(150);
+              }
+            });
 
-      $("#button3").click(function () {
+            $("#button3").click(function () {
+              $("#modal1").css("display", "block");
+            });
+
+            $(".close").click(function () {
+              $(".modal").css("display", "none");
+            });
+
+            $(window).click(function (event) {
+              if ($(event.target).is(".modal")) {
+                $(".modal").css("display", "none");
+              }
+            });
+
+            $(document).keydown(function (event) {
+              if (event.keyCode == 27) {
+                $(".modal").css("display", "none");
+              }
+            });
+
+            $("#button4").click(function () {
+              $("#modal2").css("display", "block");
+            });
+
+            $("#button5").click(function () {
+              $("#modal3").css("display", "block");
+            });
+
+            // $("#schedule").click(function () {
+            // $(".section").show().css("display", "block");
+            // });
+
+            $("#time").click(function () {
+              $("option").show(3);
+            });
+            */
+
+      $(".btn").click(function () {
         $("#modal1").css("display", "block");
       });
 
@@ -198,20 +235,12 @@
         }
       });
 
-      $("#button4").click(function () {
+      $("#imgPlus").click(function () {
         $("#modal2").css("display", "block");
       });
 
-      $("#button5").click(function () {
+      $("#payPlus").click(function () {
         $("#modal3").css("display", "block");
-      });
-
-      // $("#schedule").click(function () {
-      // $(".section").show().css("display", "block");
-      // });
-
-      $("#time").click(function () {
-        $("option").show(3);
       });
     </script>
   </body>

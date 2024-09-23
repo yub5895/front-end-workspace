@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let count = 0;
+      const setCount = () => {
+        count++;
+
+        const h1 = React.createElement("h1", null, "Total Clicks : " + count);
+        // 괄호 안은 태그, 속성, 텍스트 순
+        const button = React.createElement(
+          "button",
+          { onClick: setCount },
+          "Click!"
+        );
+        const container = React.createElement("div", null, h1, button);
+        ReactDOM.render(container, root);
+        // container 안에 담음으로써 h1, button 2개 모두 출력가능하게 됨
+      };
+      const root = document.querySelector("#root");
+      const h1 = React.createElement("h1", null, "Total Clicks : " + count);
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "Click!"
+      );
+      const container = React.createElement("div", null, h1, button);
+      ReactDOM.render(container, root);
+    </script>
+  </body>
+</html>

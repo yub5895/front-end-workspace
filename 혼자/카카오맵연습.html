@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../2.CSS/css/reset.css" />
+    <link rel="stylesheet" href="카카오맵연습.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>헤더가될공간</header>
+    <section>
+      <button id="button1">&#10094;</button>
+
+      <button id="button2">&#10095;</button>
+    </section>
+
+    <script>
+      $("#button1").click(function () {
+        $("header").animate({ marginLeft: "-200px" }, 800);
+        $("#button1")
+          .animate({ marginLeft: "-200px" }, 800)
+          .promise()
+          .done(function () {
+            $("#button1").hide();
+            $("#button2").show();
+            $("#button2").css("marginLeft", "0px");
+          });
+      });
+
+      $("#button2").click(function () {
+        $("header").animate({ marginLeft: "0px" }, 800);
+        $("#button2")
+          .animate({ marginLeft: "200px" }, 800)
+          .promise()
+          .done(function () {
+            $("#button2").hide();
+            $("#button1").show();
+            $("#button1").css("marginLeft", "0px");
+          });
+      });
+    </script>
+  </body>
+</html>

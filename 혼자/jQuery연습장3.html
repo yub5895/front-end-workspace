@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="jQuery연습장3.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="carousel">
+        <div class="mainContainer">
+          <div class="carouselItem2" style="background-color: #ff6347">
+            Slide 1
+          </div>
+          <div class="carouselItem2" style="background-color: #4682b4">
+            Slide 2
+          </div>
+          <div class="carouselItem2" style="background-color: #32cd32">
+            Slide 3
+          </div>
+        </div>
+        <button id="prevBtn" class="movingBtn">&#10094;</button>
+        <button id="nextBtn" class="movingBtn">&#10095;</button>
+      </div>
+    </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const prevButton = document.querySelector("#prevBtn");
+        const nextButton = document.querySelector("#nextBtn");
+        const carouselInner = document.querySelector(".mainContainer");
+        const items = document.querySelectorAll(".carouselItem2");
+        let currentIndex = 0;
+
+        function showItem(index) {
+          const totalItems = items.length;
+          currentIndex = (index + totalItems) % totalItems;
+          console.log(currentIndex);
+          carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+          console.log(carouselInner.style.transform);
+        }
+
+        prevButton.addEventListener("click", function () {
+          showItem(currentIndex - 1);
+          console.log("-이동중");
+        });
+
+        nextButton.addEventListener("click", function () {
+          showItem(currentIndex + 1);
+          console.log("+이동중");
+        });
+      });
+    </script>
+  </body>
+</html>

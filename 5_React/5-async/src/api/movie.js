@@ -19,6 +19,11 @@ export const getAwait = async () => {
 // axios (async ~ await) -> 가장 많이 쓰는 방식. 라이브러리이고 위에 두개보다 쓰기쉬움
 // axios는 Promise 기반 HTTP 클라이언트로, fetch보다 간결하고 많은 기능 제공
 // JSON 데이터 자동으로 파싱
-export const getAxios = async() => {
-    const response = await axios.get(); // post,get,put,delete에 따라 변경
-}
+export const getAxios = async () => {
+  try {
+    const response = await axios.get("http://localhost:8080/api/movie"); // post,get,put,delete에 따라 변경
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

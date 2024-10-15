@@ -5,7 +5,7 @@ import Converter from "./components/Converter";
 const App = () => {
   return (
     <>
-      <Converter />
+      <Counter />
     </>
   );
 };

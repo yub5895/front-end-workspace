@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.Provider;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class MovieController {
 
         StringBuffer responseBuffer = new StringBuffer();
 
-        while((line = br.readLine())!=null) {
+        while ((line = br.readLine()) != null) {
             responseBuffer.append(line);
         }
         br.close();
@@ -66,7 +67,7 @@ public class MovieController {
 
         List<Movie> list = new ArrayList<>();
 
-        for(int i = 0; i < movieList.length(); i++) {
+        for (int i = 0; i < movieList.length(); i++) {
             JSONObject result = movieList.getJSONObject(i);
             int movieCd = result.getInt("movieCd");
             log.info("movieCd : " + movieCd);
@@ -77,36 +78,38 @@ public class MovieController {
             JSONObject movieInfo = movieInfoResult.getJSONObject("movieInfo");
 
             log.info("movieInfo:" + movieInfo);
-           String title = movieInfo.getString("movieNm");
+            String title = movieInfo.getString("movieNm");
 
 
             JSONArray actors = movieInfo.getJSONArray("actors");
             String actor = "";
-            for(int j = 0; j < actors.length(); j++) {
+            for (int j = 0; j < actors.length(); j++) {
                 JSONObject actorObject = actors.getJSONObject(j);
                 actor += actorObject.getString("peopleNm");
-                if(j < actors.length() - 1) {
+                if (j < actors.length() - 1) {
                     actor += ", ";
                 }
-            };
+            }
+            ;
             log.info("actors:" + actors);
 
             JSONArray genres = movieInfo.getJSONArray("genres");
             String genre = "";
-            for(int j = 0; j < genres.length(); j++) {
+            for (int j = 0; j < genres.length(); j++) {
                 JSONObject genreObject = genres.getJSONObject(j);
                 genre += genreObject.getString("genreNm");
-                if(j < genres.length() - 1) {
+                if (j < genres.length() - 1) {
                     genre += ", ";
                 }
-            };
+            }
+            ;
             log.info("genres:" + genres);
 
             list.add(Movie.builder()
-                            .id(movieCd)
-                            .title(title)
-                            .actor(actor)
-                            .genre(genre)
+                    .id(movieCd)
+                    .title(title)
+                    .actor(actor)
+                    .genre(genre)
                     .build());
 
         }
@@ -114,4 +117,26 @@ public class MovieController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping("/movie")
+    public ResponseEntity viewAll() {
+        List<Movie> list = service.viewAll();
+        return ResponseEntity.ok(list);
+    }
+
+    @GetMapping("/movie/{id}")
+    public ResponseEntity view(@RequestBody int id) {
+        return ResponseEntity.ok(service.view(id));
+    }
+
+    @PostMapping("/movie")
+    public ResponseEntity create(@RequestBody Movie vo) {
+        service.change(vo);
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
+    
+    @DeleteMapping("/movie/{id}")
+    public ResponseEntity delete(@RequestBody int id) {
+        service.delete(id);
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
 }
